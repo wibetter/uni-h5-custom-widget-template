@@ -51,6 +51,8 @@ module.exports = {
       index: [
         './src/h5Components/info-card/renderer.js',
         './src/h5Components/info-card/plugin.js',
+        './src/h5Components/info-card-v2/renderer.js',
+        './src/h5Components/info-card-v2/plugin.js',
       ],
     },
     NODE_ENV: 'production',
@@ -69,6 +71,8 @@ module.exports = {
     entry: {
       renderer: './src/h5Components/info-card/renderer.js',
       plugin: './src/h5Components/info-card/plugin.js',
+      renderer2: './src/h5Components/info-card-v2/renderer.js',
+      plugin2: './src/h5Components/info-card-v2/plugin.js',
     },
     // 用于构建生产环境代码的相关配置信息
     NODE_ENV: 'production', // development / production
