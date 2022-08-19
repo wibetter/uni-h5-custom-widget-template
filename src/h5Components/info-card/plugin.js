@@ -5,17 +5,17 @@ import { registerPlugin } from 'vue3-aipage-widget';
 
 const InfoCardPlugin = {
   name: '信息卡片',
-  description: '快应用版信息展示卡片',
-  componentId: 'quick-info-card',
-  id: 'quick-info-card',
-  tags: ['快应用卡片'], // 组件分类
+  description: '信息展示卡片',
+  componentId: 'uni-info-card',
+  id: 'uni-info-card',
+  tags: ['自定义组件'], // 组件分类
   pluginIcon: 'cards-plugin',
   order: 1, // 展示顺序（从小到大展示）
   type: 'element', // 渲染器类型
   device: ['mobile', 'quickapp', 'quickapp-card'], // 设置类型，目前支持3种类型: pc、mobile、app、quickapp、quickapp-card
   docLink: '',
   demoProperties: {
-    componentId: 'quick-info-card',
+    componentId: 'uni-info-card',
     type: 'element',
     componentProperties: {
       data: {},
