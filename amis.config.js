@@ -57,16 +57,32 @@ module.exports = {
     closeHotReload: false, // 是否关闭热更新
     autoOpenBrowser: true,
   },
+  dev: {
+    entry: {
+      // 本地调试模式的入口
+      index: [
+        './src/h5Components/info-card/renderer.js',
+        './src/h5Components/info-card/plugin.js'
+      ]
+    },
+    // 用于开启本地调试模式的相关配置信息
+    NODE_ENV: 'development',
+    port: 80,
+    autoOpenBrowser: true,
+    assetsPublicPath: '/', // 设置静态资源的引用路径（根域名+路径）
+    assetsSubDirectory: '',
+    hostname: 'localhost',
+    cssSourceMap: false,
+    closeHotReload: false, // 是否关闭热更新
+    closeEditorClient: false, // 是否关闭自动注入editor
+    editorClient: 'aipage',
+  },
   linkDebug: {
     entry: {
       // 外链调试（爱速搭中预览本地自定义组件）
       index: [
         './src/h5Components/info-card/renderer.js',
-        './src/h5Components/info-card/plugin.js',
-        './src/h5Components/info-card-v2/renderer.js',
-        './src/h5Components/info-card-v2/plugin.js',
-        './src/h5Components/info-card-v3/renderer.js',
-        './src/h5Components/info-card-v3/plugin.js',
+        './src/h5Components/info-card/plugin.js'
       ],
     },
     NODE_ENV: 'development',
@@ -84,11 +100,7 @@ module.exports = {
   build2lib: {
     entry: {
       renderer: './src/h5Components/info-card/renderer.js',
-      plugin: './src/h5Components/info-card/plugin.js',
-      renderer2: './src/h5Components/info-card-v2/renderer.js',
-      plugin2: './src/h5Components/info-card-v2/plugin.js',
-      renderer3: './src/h5Components/info-card-v3/renderer.js',
-      plugin3: './src/h5Components/info-card-v3/plugin.js',
+      plugin: './src/h5Components/info-card/plugin.js'
     },
     // 用于构建生产环境代码的相关配置信息
     NODE_ENV: 'production', // development / production
